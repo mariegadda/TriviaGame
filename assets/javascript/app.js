@@ -30,7 +30,7 @@ var panel = $('#quiz-area');
 
 
 
-$(document).on('click', '#start', function() {
+$(document).ready(function() {
   game.start();
 });
 
@@ -54,13 +54,13 @@ var game = {
       game.done();
     }
   },
-  // start function removes the start button and adds the countdown and questions and answers
+  // start function adds the countdown and questions and answers
   start: function() {
   	// delays the counter by one second
     timer = setInterval(game.countdown, 1000);
 
     $('#subwrapper').prepend('<h2>Time Remaining: <span id="counter-number">45</span> Seconds</h2>');
-    $('#start').remove();
+    
 
 
     for (var i = 0; i < questionsAnswers.length; i++) {
