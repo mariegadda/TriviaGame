@@ -1,0 +1,19 @@
+body{
+	background-image: url("../images/space.jpg");
+	color: #D3E9F8;
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 20px;
+	padding: 50px;
+}
+
+#choiceButton{
+	padding: 5px;
+	margin: 5px;
+	
+
+	
+.done{
+		padding: 5px;
+		margin-left: 40px;
+		color: black;
+}

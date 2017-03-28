@@ -29,11 +29,12 @@ var panel = $('#quiz-area');
 // ================================================================
 
 
-
+// load the quiz when page is ready
 $(document).ready(function() {
   game.start();
 });
 
+// run done function when done button is clicked
 $(document).on('click', '#done', function() {
   game.done();
 });
@@ -66,11 +67,11 @@ var game = {
     for (var i = 0; i < questionsAnswers.length; i++) {
       panel.append('<h2>' + questionsAnswers[i].question + '</h2>');
       for (var j = 0; j < questionsAnswers[i].choices.length; j++) {
-        panel.append('<input type="radio" name="question' + '-' + i + '" value="' + questionsAnswers[i].choices[j] + '">' + questionsAnswers[i].choices[j]);
+        panel.append('<input type="radio" id="choiceButton" name="question' + '" value="' + questionsAnswers[i].choices[j] + '">' +  questionsAnswers[i].choices[j]);
       }
     }
-
-    panel.append('<button id="done">Done</button>');
+    panel.append("<br>" + "<br>")
+    panel.append('<button id="done" class="btn btn-primary">Done</button>');
   },
   
   // done function checks if the checked input is equal to the correct answer. 
